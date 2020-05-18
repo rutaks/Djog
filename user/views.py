@@ -12,7 +12,7 @@ def register(request):
             username = form.cleaned_data.get('username')
             messages.success(
                 request, f'Account for {username} was created successfully')
-            return redirect('blog-home')
+            return redirect('login')
 
     else:
         form = UserRegistrationForm()
